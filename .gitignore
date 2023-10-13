@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+.idea
+main.go
+es/init.go
+go.sum

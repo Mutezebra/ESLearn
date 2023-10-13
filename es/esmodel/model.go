@@ -1,8 +1,11 @@
 package esmodel
 
+import "time"
+
 type ESModels interface {
 	Mapping() string
 	Index() string
+	CreateTime()
 }
 
 type User struct {
@@ -44,4 +47,8 @@ func (*User) Mapping() string {
   }
 }
 `
+}
+
+func (u *User) CreateTime() {
+	u.CreateAt = time.Now().Format("2006-01-02 15:04:05")
 }
